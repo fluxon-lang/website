@@ -1,0 +1,14 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "fluxon-website",
+  "compatibility_date": "2026-06-11",
+  // Statik sayt: Worker skripti yo'q, faqat `out/` papkasidagi assetlarni edge'da serve qilamiz.
+  "assets": {
+    "directory": "./out",
+    // Static export kataloglar uchun `.html` fayllar yaratadi (masalan `/icon` -> `icon`),
+    // shuning uchun kengaytmasiz so'rovlarni mos HTML'ga moslaymiz.
+    "html_handling": "auto-trailing-slash",
+    // Topilmagan yo'llar uchun 404 sahifani qaytaramiz (SPA emas, ko'p sahifali statik).
+    "not_found_handling": "404-page"
+  }
+}

@@ -5,6 +5,9 @@ import { ImageResponse } from "next/og";
 export const size = { width: 64, height: 64 };
 export const contentType = "image/png";
 
+// Static export (`output: "export"`) uchun ikona build paytida bir marta generatsiya qilinadi
+export const dynamic = "force-static";
+
 // Favicon: qorong'i panel fonida Fraunces Italic "fx" — hero'dagi konturli belgi bilan bir xil shrift
 export default async function Icon() {
   const fraunces = await readFile(
