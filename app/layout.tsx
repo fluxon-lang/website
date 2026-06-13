@@ -22,13 +22,13 @@ const plexMono = IBM_Plex_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://fluxon-lang.com"),
-  title: "Fluxon — the backend language AI agents write well",
+  title: "Fluxon — the programming language AI agents write well",
   description:
-    "Fluxon is an AI-native backend language: one way to do each task, every battery built in, and LLM calls as a language primitive. The full spec fits in one context window.",
+    "Fluxon is an AI-native programming language: one way to do each task, fewer decisions to make and fewer tokens to spend. The whole language fits in one context window.",
   openGraph: {
-    title: "Fluxon — the backend language AI agents write well",
+    title: "Fluxon — the programming language AI agents write well",
     description:
-      "The language adapts to the AI, not the AI to the language. One task = one way, batteries included, ~2,700-token spec.",
+      "The language adapts to the AI, not the AI to the language. One task, one way — fewer decisions, fewer tokens, a ~2,700-token spec.",
     url: "https://fluxon-lang.com",
     siteName: "Fluxon",
     type: "website",
