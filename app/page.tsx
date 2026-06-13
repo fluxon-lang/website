@@ -1,5 +1,6 @@
 import Code from "./components/code";
 import Compare from "./components/compare";
+import Decide from "./components/decide";
 import HeroCode from "./components/hero-code";
 import Marquee from "./components/marquee";
 import Reveal from "./components/reveal";
@@ -15,6 +16,7 @@ export default function Home() {
       <Hero />
       <Marquee />
       <Why />
+      <DecideSection />
       <Different />
       <CompareSection />
       <Methodology />
@@ -91,7 +93,7 @@ function Hero() {
             style={{ animationDelay: "0.05s" }}
           >
             <span className="h-px w-10 bg-accent" />
-            an AI-native backend language
+            an AI-native programming language
           </p>
 
           <h1
@@ -107,8 +109,8 @@ function Hero() {
             className="rise mt-6 max-w-md text-lg leading-relaxed text-ink-soft"
             style={{ animationDelay: "0.28s" }}
           >
-            One task = one way. Batteries built in. A spec small enough for an
-            AI to read in one go.
+            One task, one way. Fewer decisions to make, fewer tokens to spend —
+            a whole language small enough for an AI to hold in its head.
           </p>
 
           <div
@@ -149,13 +151,13 @@ function Why() {
     },
     {
       big: "1",
-      title: "way to loop. One way to bind. One way to print.",
-      body: "Same meaning, same shape — there is no second idiom to choose wrong.",
+      title: "way to loop, to bind, to print.",
+      body: "No second idiom to weigh. The agent stops deciding and starts building.",
     },
     {
       big: "~2,700",
-      title: "tokens for the complete language spec.",
-      body: "An AI that has never seen Fluxon reads it once and writes working code.",
+      title: "tokens hold the entire language.",
+      body: "Fewer tokens in, fewer tokens out — more context left for the real problem.",
     },
   ];
 
@@ -191,6 +193,33 @@ function Why() {
             </div>
           </Reveal>
         ))}
+      </div>
+    </section>
+  );
+}
+
+function DecideSection() {
+  return (
+    <section className="border-t border-line py-24 sm:py-32">
+      <div className="mx-auto max-w-5xl px-5 sm:px-8">
+        <Reveal>
+          <p className="flex items-center gap-3 font-mono text-[11px] uppercase tracking-[0.28em] text-accent sm:text-xs">
+            <span className="h-px w-10 bg-accent" />
+            less to think about
+          </p>
+          <h2 className="mt-5 max-w-3xl font-display text-4xl leading-[1.08] tracking-tight sm:text-5xl">
+            Every choice is a chance to be{" "}
+            <em className="text-accent">wrong.</em>
+          </h2>
+          <p className="mt-6 max-w-2xl text-lg leading-relaxed text-ink-soft">
+            So Fluxon takes the choices away. Same task, same shape — the agent
+            spends its thinking on the problem, not on the language.
+          </p>
+        </Reveal>
+
+        <Reveal delay={0.15} className="mt-14">
+          <Decide />
+        </Reveal>
       </div>
     </section>
   );
