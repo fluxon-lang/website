@@ -1,7 +1,9 @@
+import Benchmark from "./components/benchmark";
 import Code from "./components/code";
 import Compare from "./components/compare";
 import Decide from "./components/decide";
 import HeroCode from "./components/hero-code";
+import Install from "./components/install";
 import Marquee from "./components/marquee";
 import Reveal from "./components/reveal";
 
@@ -19,7 +21,9 @@ export default function Home() {
       <DecideSection />
       <Different />
       <CompareSection />
+      <BenchmarkSection />
       <Methodology />
+      <InstallSection />
       <Cta />
       <Footer />
     </div>
@@ -56,6 +60,18 @@ function Nav() {
             className="hidden text-ink-soft transition-colors hover:text-accent sm:block"
           >
             Compare
+          </a>
+          <a
+            href="#performance"
+            className="hidden text-ink-soft transition-colors hover:text-accent sm:block"
+          >
+            Speed
+          </a>
+          <a
+            href="#install"
+            className="hidden text-ink-soft transition-colors hover:text-accent sm:block"
+          >
+            Install
           </a>
           <a
             href={GITHUB}
@@ -337,6 +353,68 @@ function CompareSection() {
   );
 }
 
+function BenchmarkSection() {
+  return (
+    <section
+      id="performance"
+      className="border-t border-line bg-paper-deep/40 py-24 sm:py-32"
+    >
+      <div className="mx-auto max-w-6xl px-5 sm:px-8">
+        <Reveal>
+          <p className="flex items-center gap-3 font-mono text-[11px] uppercase tracking-[0.28em] text-accent sm:text-xs">
+            <span className="h-px w-10 bg-accent" />
+            measured, not claimed
+          </p>
+          <h2 className="mt-5 max-w-3xl font-display text-4xl leading-[1.08] tracking-tight sm:text-5xl">
+            Fewer tokens to write. <em className="text-accent">Faster</em> to
+            run.
+          </h2>
+          <p className="mt-6 max-w-2xl text-lg leading-relaxed text-ink-soft">
+            The same CRUD service, head to head against Python · FastAPI on one
+            machine. Fluxon&apos;s Rust runtime answers reads in microseconds —
+            and stays ahead even when FastAPI spreads across four cores.
+          </p>
+        </Reveal>
+
+        <Reveal delay={0.15} className="mt-14">
+          <Benchmark />
+        </Reveal>
+      </div>
+    </section>
+  );
+}
+
+function InstallSection() {
+  return (
+    <section
+      id="install"
+      className="mx-auto max-w-6xl px-5 py-24 sm:px-8 sm:py-32"
+    >
+      <div className="grid gap-12 lg:grid-cols-[0.85fr_1.15fr] lg:gap-20">
+        <Reveal>
+          <p className="flex items-center gap-3 font-mono text-[11px] uppercase tracking-[0.28em] text-accent sm:text-xs">
+            <span className="h-px w-10 bg-accent" />
+            get started
+          </p>
+          <h2 className="mt-5 font-display text-4xl leading-[1.08] tracking-tight sm:text-5xl">
+            One line, <em className="text-accent">and you&apos;re running.</em>
+          </h2>
+          <p className="mt-6 text-lg leading-relaxed text-ink-soft">
+            A single static binary — no runtime to install, no package manager
+            to fight. Paste the command, write a{" "}
+            <span className="font-mono text-[15px] text-ink">.fx</span> file,
+            run it.
+          </p>
+        </Reveal>
+
+        <Reveal delay={0.15}>
+          <Install />
+        </Reveal>
+      </div>
+    </section>
+  );
+}
+
 function Methodology() {
   const steps = [
     {
@@ -423,7 +501,7 @@ function Cta() {
         <Reveal delay={0.12}>
           <div className="mx-auto mt-10 inline-flex items-center gap-3 rounded-lg border border-panel-line bg-panel px-5 py-3.5 font-mono text-sm text-code shadow-[0_24px_56px_-24px_rgba(29,24,18,0.5)]">
             <span className="text-code-dim">$</span>
-            <span>cargo run -- run app.fx</span>
+            <span>fluxon run app.fx</span>
             <span className="cursor-blink -mb-0.5 inline-block h-4 w-[7px] bg-accent" />
           </div>
         </Reveal>
@@ -469,6 +547,9 @@ function Footer() {
           </span>
         </p>
         <nav className="flex items-center gap-6 font-mono text-xs text-ink-soft">
+          <a href="#install" className="transition-colors hover:text-accent">
+            install
+          </a>
           <a
             href={SPEC}
             target="_blank"
