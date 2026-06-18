@@ -108,7 +108,7 @@ export default function HeroCode() {
             </span>
           ) : (
             <span className="text-code-dim">
-              $ cargo run -- run app.fx
+              $ fluxon run app.fx
               <span className="cursor-blink -mb-0.5 ml-1 inline-block h-3.5 w-[7px] bg-code-dim" />
             </span>
           )}
