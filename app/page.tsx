@@ -147,7 +147,7 @@ function Why() {
     {
       big: "19.7%",
       title: "of AI-suggested packages don't exist.",
-      body: "Fluxon ships every battery in the language — nothing to install, nothing to invent.",
+      body: "Fluxon ships every battery in the language — nothing to chase down, nothing to invent.",
     },
     {
       big: "1",
