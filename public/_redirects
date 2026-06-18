@@ -1,0 +1,6 @@
+# Short install URLs proxied to the GitHub raw install scripts.
+# Lets users run:  curl -fsSL https://fluxon-lang.com/install.sh | sh
+# instead of the long raw.githubusercontent.com URL. `curl -L` / `irm` follow
+# the 302 transparently. 302 (not 301) so the target can move per release.
+/install.sh   https://raw.githubusercontent.com/fluxon-lang/fluxon/master/install.sh   302
+/install.ps1  https://raw.githubusercontent.com/fluxon-lang/fluxon/master/install.ps1  302
