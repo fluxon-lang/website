@@ -28,7 +28,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Fluxon — the programming language AI agents write well",
     description:
-      "The language adapts to the AI, not the AI to the language. One task, one way — fewer decisions, fewer tokens, a ~2,700-token spec.",
+      "The language adapts to the AI, not the AI to the language. One task, one way — fewer decisions, fewer tokens, a whole language small enough to hold in context.",
     url: "https://fluxon-lang.com",
     siteName: "Fluxon",
     type: "website",
