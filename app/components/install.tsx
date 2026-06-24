@@ -142,11 +142,8 @@ export default function Install() {
       </div>
 
       <p className="text-sm leading-relaxed text-ink-soft">
-        Pin a version with{" "}
-        <span className="font-mono text-[13px] text-ink">
-          FLUXON_VERSION=v0.1.0
-        </span>
-        , grab a prebuilt archive from the{" "}
+        The installer always grabs the latest release. Prefer to do it by hand?
+        Grab a prebuilt archive from the{" "}
         <a
           href={RELEASES}
           target="_blank"

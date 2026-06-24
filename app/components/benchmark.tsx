@@ -4,7 +4,7 @@ import { animate, motion, useInView } from "motion/react";
 import { useEffect, useRef, useState } from "react";
 
 /* Bir xil REST API (5-endpoint CRUD), bir xil SQLite (WAL), 50 VU × 30 s.
-   To'liq metodologiya: benchmark/METHODOLOGY.md. Barcha testlar 0% xato. */
+   To'liq shartlar pastdagi izohda ko'rsatilgan. Barcha testlar 0% xato. */
 
 type Env = {
   id: string;

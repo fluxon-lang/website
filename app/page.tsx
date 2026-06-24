@@ -171,7 +171,7 @@ function Why() {
       body: "No second idiom to weigh. The agent stops deciding and starts building.",
     },
     {
-      big: "~2,700",
+      big: "~10k",
       title: "tokens hold the entire language.",
       body: "Fewer tokens in, fewer tokens out — more context left for the real problem.",
     },
